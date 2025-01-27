@@ -1,0 +1,10 @@
+Database,Table,Column,Category,Subcategory
+SalesDB,Orders,OrderID,Category1,Subcategory1
+SalesDB,Orders,CustomerID,Category1,Subcategory2
+SalesDB,Products,ProductID,Category2,Subcategory1
+SalesDB,Products,CategoryID,Category2,Subcategory2
+HRDB,Employees,EmployeeID,Category3,Subcategory1
+HRDB,Employees,DepartmentID,Category3,Subcategory2
+HRDB,Salaries,SalaryID,Category3,Subcategory3
+FinanceDB,Transactions,TransactionID,Category4,Subcategory1
+FinanceDB,Transactions,AccountID,Category4,Subcategory2
