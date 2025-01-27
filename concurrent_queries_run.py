@@ -4,6 +4,7 @@ import time
 
 # Sample function to execute a query
 
+
 def run_query(test_case, query):
     # Simulate a time-consuming query
     time.sleep(1)  # Simulates the query execution time
@@ -18,7 +19,9 @@ def run_queries_concurrently(queries):
     # Use ThreadPoolExecutor to run queries concurrently
     with concurrent.futures.ThreadPoolExecutor() as executor:
         # Create a dictionary to map future objects to test cases
-        future_to_query = {executor.submit(run_query, test_case, query): test_case for test_case, query in queries.items()}
+        future_to_query = {
+            executor.submit(run_query, test_case, query): test_case for test_case, query in queries.items()
+        }
 
         # Process the results as they complete
         for future in concurrent.futures.as_completed(future_to_query):
@@ -30,6 +33,7 @@ def run_queries_concurrently(queries):
                 results[test_case] = f"Exception: {exc}"
 
     return results
+
 
 # Example input: dictionary of test cases and their corresponding queries
 queries = {
